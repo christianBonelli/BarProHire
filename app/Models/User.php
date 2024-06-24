@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Post;
 
 class User extends Authenticatable
 {
@@ -18,7 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastName',
         'email',
+        'profilePic',
+        'description',
+        'dateOfBirth',
         'password',
     ];
 
@@ -43,5 +48,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+        // public function photos(){
+        //     return $this->hasMany(Photos::class);
+        // }
+
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
+    public function post(){
+        return $this->hasMany(Post::class);
     }
 }
