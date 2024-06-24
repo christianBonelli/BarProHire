@@ -9,6 +9,7 @@
                 <h5 class="offcanvas-title text-m sm:text-m md:text-m font-semibold text-center mb-4 sm:mb-6 py-2 px-6 bg-gradient-to-r from-orange-500 to-orange-700 text-white rounded-lg shadow-lg w-1/4 md:w-1/3" id="offcanvasNavbarLabel" style="z-index: 1050;">LINKS</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            {{-- div --}}
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     @guest
